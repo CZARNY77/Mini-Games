@@ -5,44 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini gierki</title>
     <style>
-        body {
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+        html, body {
             margin: 0;
             padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            background: rgb(255,255,255);
+            background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(183,183,186,1) 32%, rgba(1,187,239,1) 68%, rgba(144,236,255,1) 100%);background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+        }
+
+        .images-wrapper {
+            padding-left: 4%;
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            align-items: center;
         }
 
         .image-container {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            transition: background-color 0.3s, transform 0.3s;
+            filter: brightness(30%);
+            max-height: 100%;
         }
-        
+
+        .image-container:hover {
+            transform: scale(1.05);
+            filter: brightness(100%);
+        }
+
+
         .image {
-            margin: 10px;
-            cursor: pointer;
-            border: 2px solid gray; /* Dodajemy szar¹ ramkê */
-            padding: 5px; /* Dodajemy odstêp wokó³ obrazka */
+            max-width: 80%;
+            max-height: 80%;
+            border: 2px solid gray;
+            padding: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <a href="DinoWebGL/index.html">
-            <img class="image" src="DinoWebGL/icon.jpg" alt="Picture 1">
-        </a>
-        <a href="Space InvadersWebGL/index.html">
-            <img class="image" src="Space InvadersWebGL/icon.jpg" alt="Picture 2">
-        </a>
-        <a href="Flappy Birds WebGL/index.html">
-            <img class="image" src="Flappy Birds WebGL/iconjpg" alt="Picture 3">
-        </a>
-        <a href="FinDifferencesWebGL/index.html">
-            <img class="image" src="FinDifferencesWebGL/icon.jpg" alt="Picture 4">
-        </a>
-    </div>
+    <div class="images-wrapper">
+        <div class="image-container">
+            <a href="DinoWebGL/index.html">
+                <img class="image" src="DinoWebGL/icon.jpg" alt="Picture 1">
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="Space InvadersWebGL/index.html">
+                <img class="image" src="Space InvadersWebGL/icon.jpg" alt="Picture 2">
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="Flappy Birds WebGL/index.html">
+                <img class="image" src="Flappy Birds WebGL/icon.jpg" alt="Picture 3">
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="FinDifferencesWebGL/index.html">
+                <img class="image" src="FinDifferencesWebGL/icon.jpg" alt="Picture 4">
+            </a>
+        </div>
+     </div>
 </body>
 </html>
