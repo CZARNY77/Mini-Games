@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini gierki</title>
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .image {
+            margin: 10px;
+            cursor: pointer;
+            border: 2px solid gray; /* Dodajemy szar¹ ramkê */
+            padding: 5px; /* Dodajemy odstêp wokó³ obrazka */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <a href="DinoWebGL/index.html">
+            <img class="image" src="DinoWebGL/icon.jpg" alt="Picture 1">
+        </a>
+        <a href="Space InvadersWebGL/index.html">
+            <img class="image" src="Space InvadersWebGL/icon.jpg" alt="Picture 2">
+        </a>
+        <a href="Flappy Birds WebGL/index.html">
+            <img class="image" src="Flappy Birds WebGL/iconjpg" alt="Picture 3">
+        </a>
+        <a href="FinDifferencesWebGL/index.html">
+            <img class="image" src="FinDifferencesWebGL/icon.jpg" alt="Picture 4">
+        </a>
+    </div>
+</body>
+</html>
